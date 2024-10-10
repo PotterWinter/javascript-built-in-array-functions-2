@@ -375,4 +375,24 @@ const bills = [
 
 // Start coding here
 
-const totalPaidByLocation;
+const totalPaidByLocation = [];
+
+function totalPaidByLocationZip(bills) {
+  const locationTotals = {};
+
+  bills.forEach((bill) => {
+    const { location, total } = bill;
+
+    
+    if (locationTotals[location]) {
+      locationTotals[location] += total;
+    } else {
+      
+      locationTotals[location] = total;
+    }
+  });
+
+  return locationTotals;
+}
+
+console.log(totalPaidByLocationZip(bills));

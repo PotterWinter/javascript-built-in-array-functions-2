@@ -1,5 +1,13 @@
 function isPalindrome(string) {
   // Start coding here
+  const normalizedString = string
+  .toLowerCase()
+  .replace(/\s+/g, "");
+  const reversedString = normalizedString
+  .split("")
+  .reverse()
+  .join("");
+  return normalizedString === reversedString;
 }
 
 //Example case

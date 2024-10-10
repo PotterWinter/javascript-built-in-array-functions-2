@@ -374,5 +374,11 @@ const bills = [
 ];
 
 // Start coding here
+const newBills = [];
+function checkUnNull (bills){
+  return newBills
+  .push(bills.filter((unNull) => unNull.member !== null))
+}
 
-const newBills;
+checkUnNull(bills);
+console.log(newBills)
